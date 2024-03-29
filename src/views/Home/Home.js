@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import I18n from '../../utils/I18n';
 import "./Home.css"
 function Home() {
@@ -6,7 +6,7 @@ function Home() {
 
     
   return (
-    <div>
+    <div className='container'>
         <h1>{I18n( "welcomeMessage")}</h1>
 
         <p>{I18n("normalMessage")}</p>
@@ -16,9 +16,9 @@ function Home() {
         <h5>{I18n("endMessage")}</h5>
 
         <select 
-        defaultValue={localStorage.getItem("lang")}
+        defaultValue={localStorage.getItem('lang')}
         onChange={(e)=>{
-       localStorage.setItem("lang",e.target.value);
+       localStorage.setItem('lang',e.target.value);
        window.location.reload();
         }}>
             <option value="mr">Marathi</option>
@@ -26,8 +26,8 @@ function Home() {
             <option value="en">English</option>
         </select>
 
-         <p>
-            {I18n("usersSttateMessage","<studentCount>",usersCount)} users are lerning in this session.
+        <p>
+            {I18n("usersStatMessage","<studentCount>",usersCount)} 
   </p>
     </div>
   )

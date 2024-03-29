@@ -5,8 +5,9 @@ const I18n = (keyword,placeholder,value) =>{
 
     const text =  languageConfig[lang][keyword];
    if(placeholder && value){
-    return text.replace(placeholder,value);
+    return text.replace(placeholder,value)
    }
+   return text;
 }
 
-export default I18n;
+export default I18n
